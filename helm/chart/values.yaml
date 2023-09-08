@@ -13,13 +13,3 @@ image:
 config:
   backgroundColor: white
   loadbalancerEnabled: false
-
-targetCustomizations:
-- name: loadbalancer
-  clusterSelector:
-    matchLabels:
-      demo-loadbalancer: enabled
-  helm:
-    values:
-      config:
-        loadbalancerEnabled: true

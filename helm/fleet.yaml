@@ -3,3 +3,12 @@ defaultNamespace: default
 helm:
   chart: "./chart"
 
+targetCustomizations:
+- name: loadbalancer
+  clusterSelector:
+    matchLabels:
+      demo-loadbalancer: enabled
+  helm:
+    values:
+      config:
+        loadbalancerEnabled: true
