@@ -5,7 +5,7 @@
 replicaCount: 5
 
 image:
-  repository: brooksphilip/rancher-demo-navlink
+  repository: harbor.atoy.dev/public/rancher-demo-app
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
   tag: "latest"
