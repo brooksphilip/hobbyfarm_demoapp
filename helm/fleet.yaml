@@ -1,5 +1,5 @@
 defaultNamespace: default
 
 helm:
-  chart: "./helm/chart"
+  chart: "./chart"
 
