@@ -5,7 +5,7 @@ metadata:
   namespace: fleet-default
 spec:
   repo: https://github.com/atoy3731/fleet-security-demo.git
-  branch: main
+  branch: helm
   targets:
   - name: demo
     clusterSelector:
