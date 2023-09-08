@@ -1,0 +1,25 @@
+# Default values for rancher-app.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+replicaCount: 5
+
+image:
+  repository: brooksphilip/rancher-demo-navlink
+  pullPolicy: Always
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: "latest"
+
+config:
+  backgroundColor: blue
+  loadbalancerEnabled: false
+
+targetCustomizations:
+- name: loadbalancer
+  clusterSelector:
+    matchLabels:
+      demo-loadbalancer: enabled
+  helm:
+    values:
+      config:
+        loadbalancerEnabled: true
