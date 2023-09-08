@@ -4,6 +4,8 @@ kind: Service
 metadata:
   name: cowsay-loadbalancer
   namespace: default
+  annotations:
+    cloudprovider.harvesterhci.io/ipam: dhcp
 spec:
   type: LoadBalancer
   selector:
