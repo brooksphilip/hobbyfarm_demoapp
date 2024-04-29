@@ -8,7 +8,7 @@ image:
   repository: harbor.atoy.dev/public/rancher-demo-app
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "latest"
+  tag: "army"
 
 config:
   backgroundColor: white
