@@ -6,11 +6,11 @@ helm:
   - values.yaml
 
 targetCustomizations:
-- name: loadbalancer
+- name: red-background
   clusterSelector:
     matchLabels:
-      demo-loadbalancer: enabled
+      background: red
   helm:
     values:
       config:
-        loadbalancerEnabled: true
+        backgroundColor: red
