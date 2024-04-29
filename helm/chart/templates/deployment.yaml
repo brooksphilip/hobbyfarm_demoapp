@@ -16,6 +16,9 @@ spec:
       labels:
         app: demo
     spec:
+      securityContext:
+        seccompProfile:
+          type: RuntimeDefault
       containers:
       - env:
         - name: COW_COLOR
@@ -25,3 +28,10 @@ spec:
         ports:
         - containerPort: 8080
           protocol: TCP
+        securityContext:
+          runAsNonRoot: true
+          runAsUser: 1000
+          allowPrivilegeEscalation: false
+          capabilities:
+            drop: 
+            - "ALL"
