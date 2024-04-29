@@ -1,2 +1,4 @@
+replicaCount: 5
+
 config:
   backgroundColor: grey
